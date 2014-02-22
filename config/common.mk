@@ -64,7 +64,6 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
 # main packages
 PRODUCT_PACKAGES += \
-    BluetoothExt \
     Camera \
     Development \
     CMFileManager \
@@ -81,6 +80,8 @@ PRODUCT_PACKAGES += \
     Torch \
     VoicePlus \
     libemoji
+    
+#BluetoothExt \ not required for htc bravo
 
 # carbon packages
 PRODUCT_PACKAGES += \
@@ -217,6 +218,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.romstats.askfirst=1 \
 ro.romstats.ga=UA-43747246-1 \
-ro.romstats.name=CarbonRom- \
+ro.romstats.name=CarbonRom-spezi77 \
 ro.romstats.url=http://stats.carbon-rom.com \
 ro.romstats.version=$(CARBON_VERSION)
