@@ -2,7 +2,7 @@
 PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
     vendor/carbon/prebuilt/common/etc/init.d/05mountext:system/etc/init.d/05mountext \
-    vendor/carbon//prebuilt/common/etc/init.d/20extgapps:system/etc/init.d/20extgapps
+    vendor/carbon/prebuilt/common/etc/init.d/20extgapps:system/etc/init.d/20extgapps
 
 # Apps2sd files
 PRODUCT_COPY_FILES += \
