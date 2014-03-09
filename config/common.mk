@@ -53,7 +53,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # selinux dialog
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
+    ro.build.selinux=0
+
+# Disable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 
 # camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -68,7 +71,6 @@ PRODUCT_PACKAGES += \
     Development \
     CMFileManager \
     Galaxy4 \
-    LatinIME \
     LiveWallpapers \
     LiveWallpapersPicker \
     LockClock \
@@ -82,6 +84,7 @@ PRODUCT_PACKAGES += \
     libemoji
     
 #BluetoothExt \ not required for htc bravo
+#LatinIME \
 
 # carbon packages
 PRODUCT_PACKAGES += \
@@ -140,7 +143,7 @@ include vendor/carbon/config/theme_chooser.mk
 $(call inherit-product-if-exists, external/naver-fonts/fonts.mk)
 
 # overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
+#PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/carbon/overlay/common
 
 # bin
