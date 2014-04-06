@@ -14,7 +14,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bin/fix_permissions:system/bin/fix_permissions \
     $(LOCAL_PATH)/xbin/zipalign:system/xbin/zipalign
 
-# Bash (required by A2SD)
+# Bash (required to make A2SD work)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/xbin/bash:system/xbin/bash
 
