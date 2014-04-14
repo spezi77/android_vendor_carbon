@@ -14,10 +14,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bin/fix_permissions:system/bin/fix_permissions \
     $(LOCAL_PATH)/xbin/zipalign:system/xbin/zipalign
 
-# Bash (required by A2SD)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/xbin/bash:system/xbin/bash
-
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bin/compcache:system/bin/compcache \
