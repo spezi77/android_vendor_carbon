@@ -28,9 +28,9 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/app/NovaLauncher.apk:system/priv-app/NovaLauncher.apk
 
-# Google latinime
+# Copy AOSP Latinime (thanks SlimRoms)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/app/GoogleLatinIme.apk:system/app/GoogleLatinIme.apk \
+    $(LOCAL_PATH)/app/LatinIME.apk:system/app/LatinIME.apk \
     $(LOCAL_PATH)/lib/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so
 
 # Copy latinime for gesture typing
@@ -41,3 +41,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bin/hostapd:system/bin/hostapd \
     $(LOCAL_PATH)/bin/hostapd_cli:system/bin/hostapd_cli
+
+# Copy LowSoundFixer for KK (thanks tytung)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/app/LowSoundFixer_v1.0.8.apk:system/app/LowSoundFixer_v1.0.8.apk
