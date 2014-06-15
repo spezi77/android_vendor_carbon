@@ -65,33 +65,39 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
+# Installer
+PRODUCT_COPY_FILES += \
+    vendor/carbon/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
+    vendor/carbon/prebuilt/common/etc/persist.conf:system/etc/persist.conf
+
 # main packages
 PRODUCT_PACKAGES += \
+    BluetoothExt \
     Camera \
     Development \
     CMFileManager \
     Galaxy4 \
+    HoloSpiralWallpaper \
     LiveWallpapers \
     LiveWallpapersPicker \
     LockClock \
     NoiseField \
+    OmniSwitch \
     PhaseBeam \
     PhotoTable \
+    SoundRecorder \
     Superuser \
     su \
     Torch \
+    VisualizationWallpapers \
     VoicePlus \
     libemoji
-    
-#BluetoothExt \ not required for htc bravo
-#LatinIME \
 
 # carbon packages
 PRODUCT_PACKAGES += \
     BlueBalls \
     CarbonAbout \
     CarbonDelta \
-    CarbonFibers \
     ROMStats \
     Wallpapers
 
@@ -133,6 +139,13 @@ PRODUCT_PACKAGES += \
     ssh-keygen \
     start-ssh
 
+# Stagefright FFMPEG plugin
+PRODUCT_PACKAGES += \
+    libstagefright_soft_ffmpegadec \
+    libstagefright_soft_ffmpegvdec \
+    libFFmpegExtractor \
+    libnamparser
+
 # languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -170,10 +183,6 @@ PRODUCT_COPY_FILES += \
     vendor/carbon/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
     vendor/carbon/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/carbon/prebuilt/common/etc/backup.conf:system/etc/backup.conf
-
-# SELinux filesystem labels
-PRODUCT_COPY_FILES += \
-    vendor/carbon/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
 
 # sip/voip
 PRODUCT_COPY_FILES += \
@@ -224,3 +233,17 @@ ro.romstats.ga=UA-43747246-1 \
 ro.romstats.name=CarbonRom-spezi77 \
 ro.romstats.url=http://stats.carbon-rom.com \
 ro.romstats.version=$(CARBON_VERSION)
+
+# by default, do not update the recovery with system updates
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
+
+# Audio
+$(call inherit-product-if-exists, frameworks/base/data/sounds/OldAudio.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/NewAudio.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackageNewWave.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage8.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage9.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage10.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage11.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12.mk)
+$(call inherit-product-if-exists, frameworks/base/data/sounds/AudioPackage12_48.mk)
