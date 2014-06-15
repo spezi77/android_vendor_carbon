@@ -30,17 +30,11 @@ PRODUCT_COPY_FILES += \
 
 # Copy AOSP Latinime (thanks SlimRoms)
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/app/LatinIME.apk:system/app/LatinIME.apk \
-    $(LOCAL_PATH)/lib/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so
+    $(LOCAL_PATH)/app/LatinIME.apk:system/app/LatinIME.apk
 
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/lib/libjni_latinime.so:system/lib/libjni_latinime.so
-
-# Workaround - downgrade hostapd for fixing issue with wifi tethering
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bin/hostapd:system/bin/hostapd \
-    $(LOCAL_PATH)/bin/hostapd_cli:system/bin/hostapd_cli
 
 # Copy LowSoundFixer for KK (thanks tytung)
 PRODUCT_COPY_FILES += \
