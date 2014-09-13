@@ -62,6 +62,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.camera-sound=1
 
+# Disable multithreaded dexopt by default
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.dalvik.multithread=false
+
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
@@ -86,7 +90,6 @@ PRODUCT_PACKAGES += \
     PhaseBeam \
     PhotoPhase \
     PhotoTable \
-    QuickBoot \
     SoundRecorder \
     Superuser \
     su \
@@ -103,7 +106,7 @@ PRODUCT_PACKAGES += \
     ROMStats \
     Wallpapers
 
-# dsp manager
+# DSPManager
 PRODUCT_PACKAGES += \
     DSPManager \
     audio_effects.conf \
@@ -128,6 +131,9 @@ PRODUCT_PACKAGES += \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
     ntfsfix \
     ntfs-3g
 

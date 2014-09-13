@@ -1,3 +1,4 @@
+add_lunch_combo carbon_bacon-userdebug
 add_lunch_combo carbon_d2dcm-userdebug
 add_lunch_combo carbon_d2lte-userdebug
 add_lunch_combo carbon_d800-userdebug
@@ -11,6 +12,7 @@ add_lunch_combo carbon_grouper-userdebug
 add_lunch_combo carbon_hammerhead-userdebug
 add_lunch_combo carbon_hercules-userdebug
 add_lunch_combo carbon_hlte-userdebug
+add_lunch_combo carbon_hltespr-userdebug
 add_lunch_combo carbon_i605-userdebug
 add_lunch_combo carbon_i9100-userdebug
 add_lunch_combo carbon_i9300-userdebug
@@ -33,6 +35,7 @@ add_lunch_combo carbon_n5110-userdebug
 add_lunch_combo carbon_n7000-userdebug
 add_lunch_combo carbon_n7100-userdebug
 add_lunch_combo carbon_n801x-userdebug
+add_lunch_combo carbon_peregrine-userdebug
 add_lunch_combo carbon_sirius-userdebug
 add_lunch_combo carbon_skyrocket-userdebug
 add_lunch_combo carbon_t0lte-userdebug
