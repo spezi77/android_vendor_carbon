@@ -1,18 +1,18 @@
 LOCAL_PATH:= vendor/carbon/prebuilt/common
 
 # Utilize init.d scripts
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
-    $(LOCAL_PATH)/etc/init.d/05mountext:system/etc/init.d/05mountext \
-    $(LOCAL_PATH)/etc/init.d/10apps2sd-redux:system/etc/init.d/10apps2sd \
-    $(LOCAL_PATH)/etc/init.d/20extgapps:system/etc/init.d/20extgapps
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
+#    $(LOCAL_PATH)/etc/init.d/05mountext:system/etc/init.d/05mountext \
+#    $(LOCAL_PATH)/etc/init.d/10apps2sd-redux:system/etc/init.d/10apps2sd \
+#    $(LOCAL_PATH)/etc/init.d/20extgapps:system/etc/init.d/20extgapps
 
 # Apps2sd files
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bin/a2sd:system/bin/a2sd \
-    $(LOCAL_PATH)/bin/sysinit:system/bin/sysinit \
-    $(LOCAL_PATH)/bin/fix_permissions:system/bin/fix_permissions \
-    $(LOCAL_PATH)/xbin/zipalign:system/xbin/zipalign
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/bin/a2sd:system/bin/a2sd \
+#    $(LOCAL_PATH)/bin/sysinit:system/bin/sysinit \
+#    $(LOCAL_PATH)/bin/fix_permissions:system/bin/fix_permissions \
+#    $(LOCAL_PATH)/xbin/zipalign:system/xbin/zipalign
 
 # Compcache/Zram support
 PRODUCT_COPY_FILES += \
@@ -22,15 +22,16 @@ PRODUCT_COPY_FILES += \
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/app/Term.apk:system/app/Term.apk \
-    $(LOCAL_PATH)/lib/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
+    $(LOCAL_PATH)/lib/libjackpal-androidterm5.so:system/lib/libjackpal-androidterm5.so \
+    $(LOCAL_PATH)/lib/libjackpal-termexec2.so:system/lib/libjackpal-termexec2.so
     
 # Copy NovaLauncher
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/app/NovaLauncher.apk:system/priv-app/NovaLauncher.apk
 
 # Copy AOSP Latinime (thanks SlimRoms)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/app/LatinIME.apk:system/app/LatinIME.apk
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/app/LatinIME.apk:system/app/LatinIME.apk
 
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
